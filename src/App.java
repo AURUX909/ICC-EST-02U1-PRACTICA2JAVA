@@ -33,6 +33,9 @@ public class App {
         boolean per = dataStructuresPrep.isPerfectNumber(28);
         int fac = dataStructuresPrep.getFactorial(5);
         int maf = dataStructuresPrep.findMaximum(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        int pow = dataStructuresPrep.powerAlgorithm(2, 3);
+        boolean pri = dataStructuresPrep.isPrime(5);
+        int dig = dataStructuresPrep.countDigits(12345);
         /*
          * Imprimir el resultado de la operación.
          * 
@@ -53,6 +56,10 @@ public class App {
         System.out.println("El resultado de isPerfectNumber  es: " + per);
         System.out.println("El resultado de getFactorial  es: " + fac);
         System.out.println("El resultado de findMaximum  es: " + maf);
+        System.out.println("El resultado de powerAlgorithm  es: " + pow);
+        System.out.println("El resultado de isPrime  es: " + pri);
+        System.out.println("El resultado de countDigits  es: " + dig);
+
         
 
 
