@@ -26,7 +26,12 @@ public class DataStructuresPrep {
      *         Ejemplo: subtractAlgorithm(5, 3) retorna 2.
      */
     public int subtractAlgorithm(int a, int b) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int cot = 0;
+        while (a > (b + cot)) {
+            cot = cot + 1;
+        }
+        return cot;
+        //throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**
@@ -38,7 +43,12 @@ public class DataStructuresPrep {
      *         Ejemplo: multiplyAlgorithm(5, 3) retorna 15.
      */
     public int multiplyAlgorithm(int a, int b) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int result = 0;
+        for (int i = 0; i < b; i++){
+            result = result + a;
+        }
+        return result;
+        //throw new UnsupportedOperationException("Not yet implemented");
 
     }
 
@@ -51,7 +61,13 @@ public class DataStructuresPrep {
      *         Ejemplo: divideWAlgorithm(10, 2) retorna 5.
      */
     public int divideWAlgorithm(int dividend, int divisor) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int cout = 0;
+        int residuo = dividend;
+        while (residuo >= divisor) {
+            cout++;
+            residuo = residuo - divisor;
+        }
+        return cout;
 
     }
 
@@ -64,8 +80,14 @@ public class DataStructuresPrep {
      *         Ejemplo: isPerfectNumber(28) retorna true.
      */
     public boolean isPerfectNumber(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        int sum = 0;
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+        return sum == number;
+        }
 
     /**
      * Calcula el factorial de un número.
@@ -75,8 +97,12 @@ public class DataStructuresPrep {
      *         Ejemplo: getFactorial(5) retorna 120.
      */
     public int getFactorial(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        int result = 1;
+        for (int i = 1; i <= number; i++) {
+            result *= i;
+            }
+            return result;
+            }
 
     /**
      * Encuentra el número mayor en un arreglo de enteros.
@@ -86,8 +112,14 @@ public class DataStructuresPrep {
      *         Ejemplo: findMaximum(new int[]{1, 5, 3, 6, 8, 2}) retorna 8.
      */
     public int findMaximum(int[] numbers) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        int max = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+                }
+                }
+                return max;
+                }
 
     /**
      * Calcula la potencia de un número sin utilizar Math.pow.
@@ -98,8 +130,13 @@ public class DataStructuresPrep {
      *         Ejemplo: powerAlgorithm(2, 3) retorna 8.
      */
     public int powerAlgorithm(int base, int exponent) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        int result = 1;
+        for (int i = 0; i < exponent; i++) {
+            result *= base;
+            }
+            return result;
+            }
+
 
     /**
      * Verifica si un número es primo.
@@ -109,8 +146,16 @@ public class DataStructuresPrep {
      *         Ejemplo: isPrime(5) retorna true.
      */
     public boolean isPrime(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        if (number <= 1) {
+            return false;
+            }
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                    }
+                    }
+                    return true;
+                    }
 
     /**
      * Cuenta cuántos dígitos tiene un número.
@@ -120,6 +165,11 @@ public class DataStructuresPrep {
      *         Ejemplo: countDigits(12345) retorna 5.
      */
     public int countDigits(int number) {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        int count = 0;
+        while (number != 0) {
+            number /= 10;
+            count++;
+            }
+            return count;
+            } 
 }
